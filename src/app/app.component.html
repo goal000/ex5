@@ -1,0 +1,13 @@
+<h1 class="text-center text-info">{{ title }}</h1>
+<div class="text-center">
+<input type="text" class="text-center" placeholder="Enter New Task" #task/>
+<br>
+<br>
+<button class="btn btn-success" (click)="addTask(task.value)">Add New Task</button>
+<br>
+<br>
+<h3 class="text-center text-primary">Todo-List items</h3>
+<ul *ngFor="let item of list">
+  <li>{{item.name}} &nbsp;&nbsp;&nbsp;<button class="btn btn-danger" (click)="removeTask(item.id)">Remove</button></li>
+</ul>
+</div>
